@@ -1,38 +1,145 @@
+  body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .App {
+  width: 375px;
+  height: 667px;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
   text-align: center;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Chat List */
+.chat-list {
+  height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.chat-list-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chat-item {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-item:hover {
+  background-color: #f0f2f5;
+}
+
+.chat-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007bff;
   color: white;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.chat-info {
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chat-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
 }
+
+.chat-preview {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Chat Box */
+.chat-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-list {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+  background-color: #f0f2f5;
+}
+
+.message {
+  max-width: 75%;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.incoming {
+  align-self: flex-start;
+  background-color: #e4e6eb;
+  border-radius: 20px 20px 20px 0;
+}
+
+.outgoing {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: white;
+  border-radius: 20px 20px 0 20px;
+}
+
+.timestamp {
+  font-size: 11px;
+  color: #888;
+  margin-top: 5px;
+  text-align: right;
+  padding-right: 5px;
+} 
+
+/* Back Button */
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+} 
