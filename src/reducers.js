@@ -26,3 +26,23 @@ const userReducer = (state = initialState, action) => {
 };
 
 export default userReducer;
+
+// const messageReducer = (state = { messages: [], loading: false }, action) => {
+//   switch (action.type) {
+//       case 'FETCH_MESSAGES_REQUEST':
+//           return { ...state, loading: true };
+//       case 'FETCH_MESSAGES_SUCCESS':
+//           return {
+//               ...state,
+//               loading: false,
+//               messages: [...state.messages, ...action.payload], // Append new messages
+//           };
+//       case 'FETCH_MESSAGES_FAILURE':
+//           return { ...state, loading: false };
+//       default:
+//           return state;
+//   }
+// };
+
+// export default messageReducer;
+
